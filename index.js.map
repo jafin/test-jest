@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["src/index.ts"],"sourcesContent":["import { v4 as uuid } from \"uuid\";\r\n\r\nexport function generateUUID() {\r\n  return \"t\" + uuid();\r\n}\r\n\r\nconsole.log(generateUUID());\r\n"],"names":["generateUUID","uuid","console","log"],"mappings":"sGAEgBA,eACd,MAAO,IAAMC,KAAAA,KAGfC,QAAQC,IAAIH"}
