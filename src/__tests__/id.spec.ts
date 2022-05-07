@@ -1,4 +1,4 @@
-import { generateUUID } from "../index";
+import { generateUUID } from "../id";
 
 test("can run test", () => {
   expect(generateUUID()).toBeDefined();

@@ -1,7 +1,5 @@
-import { v4 as uuid } from "uuid";
-
-export function generateUUID() {
-  return "t" + uuid();
-}
+import { Component } from './Component';
+import { generateUUID } from './id';
 
 console.log(generateUUID());
+export {Component};
