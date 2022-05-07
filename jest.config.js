@@ -1,6 +1,5 @@
 const esModules = ['uuid'].join('|');
-//const esModules = [].join('|');
-
+  
 module.exports = {
   // The root of your source code, typically /src
   // `<rootDir>` is a token Jest substitutes
@@ -11,7 +10,7 @@ module.exports = {
   globals: {
     'ts-jest': {
       diagnostics: {
-        //warnOnly: true
+        warnOnly: true
       },
       useESM: true
     }
@@ -24,7 +23,7 @@ module.exports = {
 
   // Jest transformations -- this adds support for TypeScript using ts-jest
   transform: {
-    '^.+\\.(tsx|ts)$': 'ts-jest'
+    '^.+\\.(tsx|ts)$': 'ts-jest',
     //'^.+\\.scss$': 'jest-scss-transform'
   },
 
