@@ -1,11 +1,11 @@
 /**
  * @jest-environment jsdom
  */
-import React from 'react';
-import { Component } from '..';
-import { render, cleanup } from '@testing-library/react';
+//import { Component } from '..';
+//import { render } from '@testing-library/react';
+import { generateUUID } from '../id';
 
-test("can run test", () => {
-    render(<Component />);
-  });
-  
+test('can run test', () => {
+  expect(generateUUID()).toBeDefined();
+  //render(<Component />);
+});

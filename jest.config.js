@@ -1,4 +1,5 @@
 const esModules = ['uuid'].join('|');
+//const esModules = [].join('|');
   
 module.exports = {
   // The root of your source code, typically /src
@@ -12,7 +13,7 @@ module.exports = {
       diagnostics: {
         warnOnly: true
       },
-      useESM: true
+      useESM: true,
     }
   },
 
@@ -30,7 +31,8 @@ module.exports = {
   // https://stackoverflow.com/questions/49263429/jest-gives-an-error-syntaxerror-unexpected-token-export
   // https://github.com/nrwl/nx/issues/812
   // also need allowJs:true in tsconfig
-  //transformIgnorePatterns: [`/node_modules/(?!${esModules})`],
+  transformIgnorePatterns: [
+    `/node_modules/(?!${esModules})`],
 
   // Runs special logic, such as cleaning up components
   // when using React Testing Library and adds special
@@ -43,10 +45,11 @@ module.exports = {
   // Test spec file resolution pattern
   // Matches parent folder `__tests__` and filename
   // should contain `test` or `spec`.
-  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx|ts)?$',
+  testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx|ts)$',
 
   // Module file extensions for importing
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  preset: 'ts-jest/presets/js-with-ts-esm'
+  //moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  //preset: 'ts-jest/presets/js-with-ts-esm'
+  preset: 'ts-jest/presets/default-esm'
   //preset: 'ts-jest/presets/default-esm'
 };
