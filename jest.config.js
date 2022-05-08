@@ -1,5 +1,5 @@
-const esModules = ['uuid'].join('|');
-//const esModules = [].join('|');
+//const esModules = ['uuid'].join('|');
+const esModules = [].join('|');
   
 module.exports = {
   // The root of your source code, typically /src
@@ -16,6 +16,10 @@ module.exports = {
       useESM: true,
     }
   },
+
+  //custom jest28 resolver to fix issue with uuid
+  //avoids the SyntaxError: unexpeceted token 'export' with uuid package.
+  resolver: './src/jest/jest-resolver.js',
 
   //required for esm support in ts-ject  https://kulshekhar.github.io/ts-jest/docs/guides/esm-support/
   moduleNameMapper: {
